@@ -1,0 +1,104 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Сумма заказа -->
+    <TextView
+        android:id="@+id/orderAmountLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Сумма заказа"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/orderAmountInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите сумму заказа"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/orderAmountLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp" />
+
+    <!-- Сумма чаевых -->
+
+    <!-- <TextView
+        android:id="@+id/tipAmountLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Сумма чаевых"
+        app:layout_constraintTop_toBottomOf="@id/orderAmountInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/tipAmountInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите сумму чаевых"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/tipAmountLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp" />
+    -->
+
+    <Spinner
+        android:id="@+id/tipPercentageSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/tip_percentage"
+        app:layout_constraintTop_toBottomOf="@id/orderAmountInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/totalAmountLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Итоговая сумма:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tipPercentageSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/totalAmountValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.00 ₽"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/totalAmountLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp" />
+
+
+
+    <!-- Кнопка отправки -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Отправить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
